@@ -17,6 +17,11 @@
 
 package com.jaredrummler.apkparser.model;
 
+import static com.jaredrummler.apkparser.model.AndroidComponent.TYPE_ACTIVITY;
+import static com.jaredrummler.apkparser.model.AndroidComponent.TYPE_BROADCAST_RECEIVER;
+import static com.jaredrummler.apkparser.model.AndroidComponent.TYPE_CONTENT_PROVIDER;
+import static com.jaredrummler.apkparser.model.AndroidComponent.TYPE_SERVICE;
+
 import com.jaredrummler.apkparser.exception.ParserException;
 import com.jaredrummler.apkparser.utils.XmlUtils;
 
@@ -31,11 +36,6 @@ import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import static com.jaredrummler.apkparser.model.AndroidComponent.TYPE_ACTIVITY;
-import static com.jaredrummler.apkparser.model.AndroidComponent.TYPE_BROADCAST_RECEIVER;
-import static com.jaredrummler.apkparser.model.AndroidComponent.TYPE_CONTENT_PROVIDER;
-import static com.jaredrummler.apkparser.model.AndroidComponent.TYPE_SERVICE;
 
 public class AndroidManifest {
 

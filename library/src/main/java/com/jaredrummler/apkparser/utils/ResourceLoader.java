@@ -28,12 +28,15 @@
 
 package com.jaredrummler.apkparser.utils;
 
-import android.util.SparseArray;
+
+import org.eclipse.collections.api.map.primitive.IntObjectMap;
+import org.eclipse.collections.api.map.primitive.MutableIntObjectMap;
+import org.eclipse.collections.impl.map.mutable.primitive.IntObjectHashMap;
 
 public class ResourceLoader {
 
-  public static SparseArray<String> loadSystemAttrIds() {
-    SparseArray<String> array = new SparseArray<>();
+  public static IntObjectMap<String> loadSystemAttrIds() {
+    MutableIntObjectMap<String> array = new IntObjectHashMap<>();
     array.put(16842752, "theme");
     array.put(16842753, "label");
     array.put(16842754, "icon");
@@ -1244,8 +1247,8 @@ public class ResourceLoader {
     return array;
   }
 
-  public static SparseArray<String> loadSystemStyles() {
-    SparseArray<String> array = new SparseArray<>();
+  public static IntObjectMap<String> loadSystemStyles() {
+    MutableIntObjectMap<String> array = new IntObjectHashMap<>();
     array.put(16973824, "Animation");
     array.put(16973825, "Animation.Activity");
     array.put(16973826, "Animation.Dialog");

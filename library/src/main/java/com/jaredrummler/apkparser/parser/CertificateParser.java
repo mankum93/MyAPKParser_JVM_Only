@@ -32,6 +32,7 @@ import com.jaredrummler.apkparser.model.CertificateMeta;
 import com.jaredrummler.apkparser.utils.Utils;
 
 import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
@@ -39,8 +40,9 @@ import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import javax.security.cert.CertificateException;
-import javax.security.cert.X509Certificate;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 
 public class CertificateParser {
 
@@ -51,8 +53,8 @@ public class CertificateParser {
   }
 
   public CertificateMeta parse() throws IOException, CertificateException {
-    X509Certificate certificate = X509Certificate.getInstance(Utils.toByteArray(in));
-    CertificateMeta.Builder builder = CertificateMeta.newCertificateMeta();
+    X509Certificate certificate = (X509Certificate) CertificateFactory.getInstance("X.509")
+            .generateCertificate(new ByteArrayInputStream(Utils.toByteArray(in)));    CertificateMeta.Builder builder = CertificateMeta.newCertificateMeta();
     byte[] bytes = certificate.getEncoded();
     String certMd5 = md5Digest(bytes);
     String publicKeyString = byteToHexString(bytes);

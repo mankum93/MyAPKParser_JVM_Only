@@ -32,7 +32,12 @@ import com.jaredrummler.apkparser.model.ApkMeta;
 import com.jaredrummler.apkparser.model.GlEsVersion;
 import com.jaredrummler.apkparser.model.Permission;
 import com.jaredrummler.apkparser.model.UseFeature;
-import com.jaredrummler.apkparser.struct.xml.*;
+import com.jaredrummler.apkparser.struct.xml.Attributes;
+import com.jaredrummler.apkparser.struct.xml.XmlCData;
+import com.jaredrummler.apkparser.struct.xml.XmlNamespaceEndTag;
+import com.jaredrummler.apkparser.struct.xml.XmlNamespaceStartTag;
+import com.jaredrummler.apkparser.struct.xml.XmlNodeEndTag;
+import com.jaredrummler.apkparser.struct.xml.XmlNodeStartTag;
 
 public class ApkMetaTranslator implements XmlStreamer {
 

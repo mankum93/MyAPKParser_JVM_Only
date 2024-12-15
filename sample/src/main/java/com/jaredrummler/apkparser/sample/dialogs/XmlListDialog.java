@@ -23,7 +23,8 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.jaredrummler.apkparser.sample.interfaces.ApkParserSample;
 import com.jaredrummler.apkparser.sample.util.AppNames;

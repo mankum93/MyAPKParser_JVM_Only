@@ -28,11 +28,11 @@
 
 package com.jaredrummler.apkparser.struct.xml;
 
-import android.util.SparseArray;
-
 import com.jaredrummler.apkparser.struct.ResourceEntity;
 import com.jaredrummler.apkparser.struct.resource.ResourceTable;
 import com.jaredrummler.apkparser.utils.ResourceLoader;
+
+import org.eclipse.collections.api.map.primitive.IntObjectMap;
 
 import java.util.Locale;
 
@@ -63,7 +63,7 @@ public class Attribute {
    */
   public static class AttrIds {
 
-    private static final SparseArray<String> IDS = ResourceLoader.loadSystemAttrIds();
+    private static final IntObjectMap<String> IDS = ResourceLoader.loadSystemAttrIds();
 
     public static String getString(long id) {
       String value = IDS.get((int) id);

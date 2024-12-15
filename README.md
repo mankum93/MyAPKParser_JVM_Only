@@ -12,7 +12,7 @@
 Download [the latest AAR](https://repo1.maven.org/maven2/com/jaredrummler/apk-parser/1.0.2/apk-parser-1.0.2.aar) or grab via Gradle:
 
 ```groovy
-compile 'com.jaredrummler:apk-parser:1.0.2'
+implementation 'com.jaredrummler:apk-parser:1.0.2'
 ```
 
 #### Usage

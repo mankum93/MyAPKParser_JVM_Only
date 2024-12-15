@@ -22,7 +22,6 @@ import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
 import android.webkit.WebResourceResponse;
@@ -30,7 +29,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.jaredrummler.apkparser.ApkParser;
+import com.jaredrummler.apkparser.ApkParserExt;
 import com.jaredrummler.apkparser.sample.R;
 import com.jaredrummler.apkparser.sample.util.AppNames;
 
@@ -125,7 +127,7 @@ public class XmlSourceViewerActivity extends AppCompatActivity {
   private final class AndroidXmlLoader extends AsyncTask<PackageInfo, Void, String> {
 
     @Override protected String doInBackground(PackageInfo... params) {
-      ApkParser apkParser = ApkParser.create(params[0].applicationInfo);
+      ApkParser apkParser = ApkParserExt.create(params[0].applicationInfo);
       try {
         final String source;
         if (xml.equals("AndroidManifest.xml")) {

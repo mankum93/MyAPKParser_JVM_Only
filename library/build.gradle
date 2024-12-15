@@ -1,13 +1,26 @@
-apply plugin: 'com.android.library'
-
-android {
-  compileSdkVersion 27
-  buildToolsVersion '27.0.3'
-
-  defaultConfig {
-    minSdkVersion 9
-    targetSdkVersion 27
-  }
+plugins {
+    id 'java-library'
+    alias(libs.plugins.jetbrains.kotlin.jvm)
 }
 
-//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+    }
+}
+
+/*tasks.withType(Jar).configureEach {
+    exclude('LICENSE-EPL-1.0.txt')
+}*/
+
+dependencies {
+
+    implementation 'org.eclipse.collections:eclipse-collections:12.0.0.M3'
+    implementation 'org.eclipse.collections:eclipse-collections-api:12.0.0.M3'
+
+}

@@ -23,10 +23,12 @@ import android.content.pm.PackageInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Looper;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.jaredrummler.apkparser.ApkParser;
+import com.jaredrummler.apkparser.ApkParserExt;
 import com.jaredrummler.apkparser.model.DexInfo;
 import com.jaredrummler.apkparser.sample.dialogs.XmlListDialog;
 import com.jaredrummler.apkparser.sample.fragments.AppListFragment;
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements ApkParserSample {
     new Thread(new Runnable() {
 
       @Override public void run() {
-        ApkParser parser = ApkParser.create(app);
+        ApkParser parser = ApkParserExt.create(app);
         try {
           List<DexInfo> dexInfos = parser.getDexInfos();
           int methodCount = 0;

@@ -20,7 +20,6 @@ package com.jaredrummler.apkparser.model;
 import org.w3c.dom.NamedNodeMap;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class IntentFilter {

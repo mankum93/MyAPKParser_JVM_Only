@@ -28,7 +28,11 @@
 
 package com.jaredrummler.apkparser.parser;
 
-import com.jaredrummler.apkparser.struct.xml.*;
+import com.jaredrummler.apkparser.struct.xml.XmlCData;
+import com.jaredrummler.apkparser.struct.xml.XmlNamespaceEndTag;
+import com.jaredrummler.apkparser.struct.xml.XmlNamespaceStartTag;
+import com.jaredrummler.apkparser.struct.xml.XmlNodeEndTag;
+import com.jaredrummler.apkparser.struct.xml.XmlNodeStartTag;
 
 public class CompositeXmlStreamer implements XmlStreamer {
 

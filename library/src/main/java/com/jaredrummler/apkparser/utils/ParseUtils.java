@@ -30,8 +30,16 @@ package com.jaredrummler.apkparser.utils;
 
 import com.jaredrummler.apkparser.exception.ParserException;
 import com.jaredrummler.apkparser.parser.StringPoolEntry;
-import com.jaredrummler.apkparser.struct.*;
-import com.jaredrummler.apkparser.struct.resource.*;
+import com.jaredrummler.apkparser.struct.AndroidConstants;
+import com.jaredrummler.apkparser.struct.ResValue;
+import com.jaredrummler.apkparser.struct.ResourceEntity;
+import com.jaredrummler.apkparser.struct.StringPool;
+import com.jaredrummler.apkparser.struct.StringPoolHeader;
+import com.jaredrummler.apkparser.struct.resource.ResourceEntry;
+import com.jaredrummler.apkparser.struct.resource.ResourcePackage;
+import com.jaredrummler.apkparser.struct.resource.ResourceTable;
+import com.jaredrummler.apkparser.struct.resource.Type;
+import com.jaredrummler.apkparser.struct.resource.TypeSpec;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
